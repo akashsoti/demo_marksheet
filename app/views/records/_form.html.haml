@@ -1,0 +1,10 @@
+.row#form-box
+  .span6.offset3
+    = simple_form_for @record do |f| 
+      = f.input :subject 
+      = f.input :teacher 
+      = f.input :mark_1 
+      = f.input :mark_2 
+      = f.input :mark_3 
+      = f.button :submit
+
