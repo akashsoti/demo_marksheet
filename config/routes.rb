@@ -1,6 +1,8 @@
 Marksheet::Application.routes.draw do
   resources :records 
 
+  root :to => 'records#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

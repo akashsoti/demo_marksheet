@@ -3,8 +3,10 @@
 
 /* mixins, variables, etc. */
 
-$grayMediumLight: #eaeaea;
+$grayMediumLight: #313030;
 $jetblack: #000000;
+$oceanblue: #40d586;
+$soothing-pink: #e54545;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
@@ -21,7 +23,6 @@ html {
 
 body {
   padding-top: 60px;
-  background-image:url('backtoschool.jpg');
   background-color: #feff86;
 }
 
@@ -102,13 +103,14 @@ input, textarea, select, .uneditable-input {
 #box {
 	
 	margin-left: 0px;
-	background-color: #4b1b6d;
+	background-color: #40d586;
 	-moz-box-shadow:    inset 0 0 10px #000000;
    -webkit-box-shadow: inset 0 0 10px #000000;
    box-shadow:         inset 0 0 10px #000000;
-   h3{
+   h3, h1{
    	padding-top: 10px;
    	margin-bottom: 20px;
+    color: $grayMediumLight;
    }
 
 }
@@ -118,4 +120,142 @@ input, textarea, select, .uneditable-input {
 #form-box{
 	
 	margin-top: 80px;
+}
+
+
+
+.simple_form {
+  .control-group {
+    background-color: #f2f2f2;
+    padding: 5px;
+    margin-bottom: 2px;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  fieldset.column_left {
+    margin-right: 5px;
+  }
+  abbr {
+    color: #CC0000;
+    border-bottom: none;
+  }
+}
+
+.simple_form.form-horizontal {
+  $indent: 200px;
+  .control-label {
+    width: $indent;
+    font-size: 11pt;
+  }
+  .controls {
+    margin-left: $indent + 20px;
+  }
+  .help-block {
+    color: #999999;
+  }
+}
+
+/*
+.simple_form {
+  $indent: 220px;
+  label {
+    float: left;
+    font-size: 40px;
+    width: $indent - 20px;
+    text-align: right;
+    margin: 2px 10px;
+    &.radio, &.checkbox {
+      float: none;
+      margin: 0;
+      width: auto;
+      text-align: left;
+    }
+    &.checkbox {
+      display: block;
+      margin-left: $indent;
+      input.boolean {
+        margin-right: 5px;
+      }
+    }
+    &.radio { margin-right: 10px; }
+  }
+  div.input {
+    font-size: 11pt;
+    background-color: #eee;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px;
+  }
+  div.input.hidden {
+    display: none;
+  }
+  input.radio_buttons, input.check_boxes {
+    margin-right: 5px;
+  }
+  input {
+    font-size: 11pt;
+  }
+  .btn { margin-left: $indent; }
+  .alert-error {
+    color: #D00;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .hint, .error {
+    clear: left;
+    margin-left: $indent;
+    font-size: 12px;
+    color: #D00;
+    display: block;
+    margin-top: 5px;
+  }
+  .hint {
+    color: #666;
+    font-style: italic;
+  }
+  abbr {
+    color: red;
+  }
+  select {
+    min-width: 300px;
+  }
+  fieldset {
+    border: 0px;
+    margin: 5px 0px;
+    &.column_left {
+      float: left;
+      width: 49%;
+    }
+    &.column_right {
+      float: right;
+      width: 49%;
+    }
+    legend {
+      font-size: 1.2em;
+      border: 1px solid #ccc;
+      padding: 5px;
+      font-style: italic;
+      background-color: #ddd;
+      margin-left: 10px;
+    }
+  }
+}
+*/
+.invoice-items select {
+  max-width: 55px;
+}
+
+#create-box{
+  background-color: $oceanblue;
+  height: 200px;
+  h1{
+    margin-top: 70px;
+    color: $grayMediumLight;
+  }
+}
+
+#update-box{
+  background-color: $soothing-pink;
+  h1{
+    color: $grayMediumLight;
+  }
+
 }

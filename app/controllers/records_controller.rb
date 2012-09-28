@@ -10,6 +10,10 @@ class RecordsController < ApplicationController
   	else
   		flash.now[:error] = "error while saving"	
   	end
-		render 'new'
+    redirect_to new_record_path
 	end
+
+  def home
+    
+  end
 end
