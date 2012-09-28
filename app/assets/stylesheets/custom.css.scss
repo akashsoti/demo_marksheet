@@ -257,5 +257,18 @@ input, textarea, select, .uneditable-input {
   h1{
     color: $grayMediumLight;
   }
+}
 
+#delete-box{
+  background-color: #4a56c9;
+  margin-top: 30px;
+  height: 110px;
+  h1{
+    margin-top: 25px;
+    color: $grayMediumLight;
+  }
+}
+
+.wrapper{
+  margin-top: 250px;
 }
