@@ -1,3 +1,7 @@
+
+.head
+  %h1 Student's Records
+
 .wrapper
   = link_to new_record_path do 
     .span4.offset1#create-box
@@ -7,6 +11,6 @@
     .span4.offset1#update-box
       %h1 Update a record
 
-  =link_to do
+  =link_to records_path do
     .span4.offset1#delete-box
       %h1 Delete a record  

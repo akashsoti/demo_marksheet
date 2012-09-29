@@ -1,8 +1,11 @@
 class Record < ActiveRecord::Base
   attr_accessible :mark_1, :mark_2, :mark_3, :subject, :teacher
-  validates :subject, :teacher, presence: true 
+
+  VALID_NAME = /[a-z]/
+  validates :subject, :teacher, presence: true, format: { with: VALID_NAME }
   validates :mark_1, :mark_2, :mark_3, presence: true, numericality: true
 
+  
   before_save :check_marks
 
 	def check_marks

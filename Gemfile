@@ -13,6 +13,7 @@ group :development, :test do
   gem 'mysql2'
   gem 'rspec-rails', '2.10.0'
   gem 'guard-rspec', '0.5.5'
+  gem 'faker'
 end
 
 
