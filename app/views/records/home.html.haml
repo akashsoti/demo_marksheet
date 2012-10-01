@@ -1,16 +1,16 @@
 
 .head
-  %h1 Student's Records
+  %h1 Students Records
 
 .wrapper
   = link_to new_record_path do 
     .span4.offset1#create-box
       %h1 Create a record
 
-  =link_to do
+  =link_to records_path(a: "edit") do
     .span4.offset1#update-box
       %h1 Update a record
 
-  =link_to records_path do
+  =link_to records_path(a: "delete") do
     .span4.offset1#delete-box
       %h1 Delete a record  

@@ -11,6 +11,11 @@
 			<% flash.each do |key, value| %>
   			<div class="alert alert-<%= key %>"><%= value %></div>
 			<% end %>
+			<nav class= "home">
+				<ul class= "link">
+					<li><%= link_to "Home", root_path %></li>
+				</ul>
+			</nav>
 			<%= yield %>
 			<canvas id="stripes">
 		</div>

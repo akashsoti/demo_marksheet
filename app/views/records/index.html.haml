@@ -6,11 +6,16 @@
 		%th 2nd test marks
 		%th 3rd test marks
 	- @records.each do |record|
-		%tr
+		%tr 
 			%td= record.subject
 			%td= record.teacher
 			%td= record.mark_1
 			%td= record.mark_2
 			%td= record.mark_3
-			%td= link_to 'delete', record, method: :delete
+			- if params[:a] == "edit"
+				%td= link_to "edit", edit_record_path(record)
+			- if params[:a] == "delete"	
+				%td= link_to "delete", record_path(record), method: :delete
+			
+
 

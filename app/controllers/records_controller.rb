@@ -20,8 +20,18 @@ class RecordsController < ApplicationController
   def home
   end
 
+  def edit
+    @record = Record.find(params[:id])
+  end
+
   def update
-    
+    record = Record.find(params[:id])
+    if record.update_attributes(params[:record])
+      flash[:sucess] = "Record updated"
+    else
+      flash[:error] = "Please update properly"
+    end
+      redirect_to records_path(a: "edit")
   end
 
   def destroy
